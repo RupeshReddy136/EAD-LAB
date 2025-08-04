@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* Reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+body {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(120deg, #f0f4f8, #d9e2ec);
+}
+
+/* Container */
+.form.container {
+  background: white;
+  padding: 2rem;
+  width: 100%;
+  max-width: 360px;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.form.container h1 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+/* Form fields */
+form {
+  display: flex;
+  flex-direction: column;
+}
+label {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: #555;
+  text-align: left;
+}
+input[type="text"],
+input[type="password"] {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+input:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 2px rgba(74,144,226,0.25);
+  outline: none;
+}
+
+/* Button */
+button {
+  margin-top: 1.5rem;
+  padding: 0.8rem;
+  font-size: 1rem;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.1s;
+}
+button:hover { background-color: #3a80d2; }
+button:active { transform: scale(0.98); }
+
+/* Signup hint */
+h4 {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+h4 a {
+  color: #4a90e2;
+  text-decoration: none;
+}
+h4 a:hover {
+  text-decoration: underline;
+}
+
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class ="form container"> 
+        <h1>login</h1>
+        <form action="#" method="post">
+            <label for="name">Email</label>
+            <input type="text" id="email" email="email" required>
+
+            <label for="Password"> Password:</label>
+            <input type="password" id="password" password="password" required>
+            <button>Login</button>
+            <h4> Do not have a account</h4><a href="sigup">signup here</a>.</p>
+
+        
+        </form>                             
+
+    </div>
+    <script>
+        // Add any JavaScript functionality here if needed
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Handle form submission logic here
+            alert('Form submitted!');
+        });
+    </script>
+</body>
+</html>

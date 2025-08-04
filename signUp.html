@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Signup</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+    .form-container {
+      max-width: 400px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      margin-top: 12px;
+    }
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 4px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    input:focus,
+    textarea:focus {
+      border-color: #28a745;
+      box-shadow: 0 0 5px rgba(40, 167, 69, 0.2);
+      outline: none;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 20px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+    p {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 480px) {
+      .form-container {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>Signup</h1>
+    <form id="signupForm" action="/signup" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required autocomplete="name">
+
+      <label for="fathername">Father Name:</label>
+      <input type="text" id="fathername" name="fathername" required>
+
+      <label for="hallticket">Hall Ticket Number:</label>
+      <input type="text" id="hallticket" name="hallticket" required>
+
+      <label for="rank">Rank:</label>
+      <input type="number" id="rank" name="rank" required>
+
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" rows="3" required></textarea>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required autocomplete="email">
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required autocomplete="new-password">
+
+      <label for="confirm_password">Confirm Password:</label>
+      <input type="password" id="confirm_password" name="confirm_password" required autocomplete="new-password">
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" placeholder="10-digit number">
+
+      <label for="branch">Branch:</label>
+      <input type="text" id="branch" name="branch" required>
+
+      <label for="year">Year:</label>
+      <input type="number" id="year" name="year" required min="1" max="5">
+
+      <label for="section">Section:</label>
+      <input type="text" id="section" name="section" required>
+
+      <button type="submit">Sign Up</button>
+    </form>
+    <p>Already have an account? <a href="/login
+        ';
+        ;">Login here</a>.</p>
+  </div>
+
+  <script>
+    document.getElementById('signupForm').addEventListener('submit', function (e) {
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirm_password').value;
+
+
+
+
+
+      
+      if (password !== confirmPassword) {
+        alert('Passwords do not match!');
+        e.preventDefault();
+      }
+    });
+  </script>
+</body>
+</html>
